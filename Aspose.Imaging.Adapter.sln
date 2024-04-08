@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Imaging.Pdf.Adapter", "Aspose.Imaging.Pdf.Adapter\Aspose.Imaging.Pdf.Adapter.csproj", "{FB36CFDF-906F-4DE2-850F-CE510CCCF21F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Imaging.Pdf.Adapter.Tests", "Aspose.Imaging.Pdf.Adapter.Tests\Aspose.Imaging.Pdf.Adapter.Tests.csproj", "{45E00338-707C-493C-B3CF-650119A451C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB36CFDF-906F-4DE2-850F-CE510CCCF21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB36CFDF-906F-4DE2-850F-CE510CCCF21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB36CFDF-906F-4DE2-850F-CE510CCCF21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB36CFDF-906F-4DE2-850F-CE510CCCF21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E00338-707C-493C-B3CF-650119A451C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E00338-707C-493C-B3CF-650119A451C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E00338-707C-493C-B3CF-650119A451C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E00338-707C-493C-B3CF-650119A451C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFD45A5D-EBB9-45B9-BBDE-6FD3D22E7AA3}
+	EndGlobalSection
+EndGlobal
