@@ -11,11 +11,11 @@ namespace Aspose.Imaging.Pdf.Adapter.Loader
     /// <summary>
     /// The pdf loader descriptor
     /// </summary>
-    /// <seealso cref="Aspose.Imaging.IImageLoaderDescriptor" />
+    /// <seealso href="https://reference.aspose.com/imaging/net/aspose.imaging/iimageloaderdescriptor/" />
     public class PdfLoaderDescriptor : IImageLoaderDescriptor
     {
         /// <summary>
-        /// Gets the supported format.
+        /// Gets the <see href="https://reference.aspose.com/imaging/net/aspose.imaging/fileformat/">supported format.</see>
         /// </summary>
         /// <value>
         /// The supported format.
@@ -25,8 +25,8 @@ namespace Aspose.Imaging.Pdf.Adapter.Loader
         /// <summary>
         /// Determines whether this instance can load the specified stream container.
         /// </summary>
-        /// <param name="streamContainer">The stream container.</param>
-        /// <param name="loadOptions">The load options.</param>
+        /// <param name="streamContainer"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/streamcontainer/">The stream container.</see></param>
+        /// <param name="loadOptions"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/loadoptions/">The load options.</see></param>
         /// <returns>
         ///   <c>true</c> if this instance can load the specified stream container; otherwise, <c>false</c>.
         /// </returns>
@@ -41,7 +41,9 @@ namespace Aspose.Imaging.Pdf.Adapter.Loader
         /// <summary>
         /// Creates the instance.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        ///<see href="https://reference.aspose.com/imaging/net/aspose.imaging/iimageloader/">Aspose.Imaging.IImageLoader</see>
+        /// </returns>
         public IImageLoader CreateInstance()
         {
             return new PdfImageLoader();

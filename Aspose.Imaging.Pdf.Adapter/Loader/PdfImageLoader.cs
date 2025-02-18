@@ -7,20 +7,25 @@
 namespace Aspose.Imaging.Pdf.Adapter.Loader
 {
     /// <summary>
-    /// The Pdf image loader
+    /// The Pdf image loader of <see href="https://reference.aspose.com/imaging/net/aspose.imaging/iimageloader/">IImageLoader</see>
+    /// <br/>
+    /// See also
+    /// <seealso href="https://reference.aspose.com/imaging/net/aspose.imaging/iimageloader/" />
     /// </summary>
-    /// <seealso cref="Aspose.Imaging.IImageLoader" />
     public class PdfImageLoader : IImageLoader
     {
         /// <summary>
-        /// Loads the specified stream container.
+        /// Loads an image from the specified stream container.
         /// </summary>
-        /// <param name="streamContainer">The stream container.</param>
-        /// <param name="loadOptions">The load options.</param>
-        /// <returns></returns>
+        /// <param name="streamContainer"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/streamcontainer/">The stream container.</see></param>
+        /// <param name="loadOptions"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/loadoptions/">The load options.</see></param>
+        /// <returns>
+        /// <see href="https://reference.aspose.com/imaging/net/aspose.imaging/image/">Aspose.Imaging.Image</see>
+        /// </returns>
         public Aspose.Imaging.Image Load(StreamContainer streamContainer, LoadOptions loadOptions)
         {
             return new PdfImage(streamContainer.Stream);
         }
+
     }
 }

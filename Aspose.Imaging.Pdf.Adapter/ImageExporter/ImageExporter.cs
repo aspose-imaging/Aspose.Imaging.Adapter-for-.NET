@@ -6,6 +6,8 @@
 
 namespace Aspose.Imaging.Pdf.Adapter.ImageExporter
 {
+    using System;
+    using System.IO;
     using Aspose.Pdf;
     using ImageOptions;
     using Image = Imaging.Image;

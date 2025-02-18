@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <VersionNumber Condition=" '$(VersionNumber)' == '' ">24.4</VersionNumber>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <VersionNumber Condition="'$(VersionNumber)' == '' ">25.2</VersionNumber>
+	<PdfVersion Condition="'$(PdfVersion)' == '' ">25.2</PdfVersion>
+    <ImgVersion Condition="'$(ImgVersion)' == '' ">25.2</ImgVersion>
+    <TargetFrameworks>net7.0;net6.0;net8.0;netstandard2.0</TargetFrameworks>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Copyright>Copyright © 2010-2024 Aspose Pty Ltd.</Copyright>
@@ -16,8 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspose.Imaging" Version="24.4.0" />
-    <PackageReference Include="Aspose.PDF" Version="24.2.0" />
+    <PackageReference Include="Aspose.Imaging" Version="[$(ImgVersion),)" />
+    <PackageReference Include="Aspose.PDF" Version="[$(PdfVersion),)" />
   </ItemGroup>
 
   <ItemGroup>

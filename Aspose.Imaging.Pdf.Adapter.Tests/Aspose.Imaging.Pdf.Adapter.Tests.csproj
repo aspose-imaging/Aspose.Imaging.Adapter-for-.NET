@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -16,8 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspose.Imaging" Version="24.4.0" />
-    <PackageReference Include="Aspose.PDF" Version="24.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
@@ -26,7 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aspose.Imaging.Pdf.Adapter\Aspose.Imaging.Pdf.Adapter.csproj" />
+    <ProjectReference Include="..\Aspose.Imaging.Adatpter.Tests.Core\Aspose.Imaging.Adatpter.Tests.Core.csproj" />
+    <ProjectReference Include="..\Aspose.Imaging.Pdf.Adapter\Aspose.Imaging.Pdf.Adapter.csproj">
+      <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

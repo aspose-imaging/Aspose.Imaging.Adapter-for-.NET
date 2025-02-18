@@ -6,17 +6,18 @@
 
 namespace Aspose.Imaging.Pdf.Adapter
 {
+    using System;
+    using System.IO;
     using System.Runtime.CompilerServices;
     using Aspose.Pdf;
     using ImageExporter;
     using ImageOptions;
     using Loader;
-    using License = Imaging.License;
 
     /// <summary>
-    ///     The pdf image
+    ///     The pdf image of <see href="https://reference.aspose.com/imaging/net/aspose.imaging/vectormultipageimage/">VectorMultipageImage</see>
+    /// <seealso href="https://reference.aspose.com/imaging/net/aspose.imaging/vectormultipageimage/" />
     /// </summary>
-    /// <seealso cref="Aspose.Imaging.VectorMultipageImage" />
     public class PdfImage : VectorMultipageImage
     {
         #region Fields
@@ -46,9 +47,10 @@ namespace Aspose.Imaging.Pdf.Adapter
         #region Constructors
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="PdfImage" /> class.
+        ///Initializes a new instance of the <see cref="PdfImage" /> class.
         /// </summary>
-        /// <param name="pdfDocument">The PDF document.</param>
+        /// <param name="pdfDocument" cref="Aspose.Pdf.Document"><see href="https://reference.aspose.com/pdf/net/aspose.pdf/document/">The PDF document</see>
+        /// </param>
         public PdfImage(Document pdfDocument)
         {
             this.doc = pdfDocument;
@@ -57,8 +59,9 @@ namespace Aspose.Imaging.Pdf.Adapter
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="PdfImage" /> class.
+        /// <seealso cref="System.IO.Stream"/>
         /// </summary>
-        /// <param name="stream">The stream.</param>
+        /// <param name="stream" cref="System.IO.Stream">The stream.</param>
         public PdfImage(Stream stream) : this(new Document(stream))
         {
         }
@@ -92,7 +95,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         public override int Height => (int)this.doc.PageInfo.Height;
 
         /// <summary>
-        ///     Gets the pages.
+        ///     Gets the pages, where pages are an array of <see href="https://reference.aspose.com/imaging/net/aspose.imaging/image/">Image</see>.
         /// </summary>
         /// <value>
         ///     The pages.
@@ -100,7 +103,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         public override Imaging.Image[] Pages => this.pages;
 
         /// <summary>
-        ///     Gets the default page.
+        ///     Gets the default <see href="https://reference.aspose.com/imaging/net/aspose.imaging/image/">page</see>.
         /// </summary>
         /// <value>
         ///     The default page.
@@ -124,7 +127,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         public override int BitsPerPixel { get; }
 
         /// <summary>
-        /// Gets the PDF document.
+        /// Gets the PDF <see href="https://reference.aspose.com/pdf/net/aspose.pdf/document/">document</see>.
         /// </summary>
         /// <value>
         /// The PDF document.
@@ -144,35 +147,8 @@ namespace Aspose.Imaging.Pdf.Adapter
         #region Methods
 
         /// <summary>
-        ///     Sets the license.
-        /// </summary>
-        /// <param name="fileName">Name of the file.</param>
-        public static void SetLicense(string fileName)
-        {
-            var pdfLic = new Aspose.Pdf.License();
-            pdfLic.SetLicense(fileName);
-
-            var imgLic = new License();
-            imgLic.SetLicense(fileName);
-        }
-
-        /// <summary>
-        ///     Sets the license.
-        /// </summary>
-        /// <param name="stream">The stream.</param>
-        public static void SetLicense(Stream stream)
-        {
-            var pdfLic = new Aspose.Pdf.License();
-            pdfLic.SetLicense(stream);
-
-            var imgLic = new License();
-            imgLic.SetLicense(stream);
-        }
-
-        /// <summary>
         /// Initializations this instance.
         /// </summary>
-        [ModuleInitializer]
         public static void Register()
         {
             if (registered)
@@ -200,11 +176,11 @@ namespace Aspose.Imaging.Pdf.Adapter
         }
 
         /// <summary>
-        ///     Resizes the specified new width.
+        ///     Image resize 
         /// </summary>
         /// <param name="newWidth">The new width.</param>
         /// <param name="newHeight">The new height.</param>
-        /// <param name="resizeType">Type of the resize.</param>
+        /// <param name="resizeType"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/resizetype/">Type</see> of the resize.</param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void Resize(int newWidth, int newHeight, ResizeType resizeType)
         {
@@ -212,11 +188,11 @@ namespace Aspose.Imaging.Pdf.Adapter
         }
 
         /// <summary>
-        ///     Resizes the specified new width.
+        ///    Image resize.
         /// </summary>
         /// <param name="newWidth">The new width.</param>
         /// <param name="newHeight">The new height.</param>
-        /// <param name="settings">The settings.</param>
+        /// <param name="settings"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/imageresizesettings/">The settings.</see></param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void Resize(int newWidth, int newHeight, ImageResizeSettings settings)
         {
@@ -224,9 +200,9 @@ namespace Aspose.Imaging.Pdf.Adapter
         }
 
         /// <summary>
-        ///     Rotates the flip.
+        ///     Rotate and flip images.
         /// </summary>
-        /// <param name="rotateFlipType">Type of the rotate flip.</param>
+        /// <param name="rotateFlipType"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/rotatefliptype/">Type of the rotate flip.</see></param>.
         /// <exception cref="System.NotImplementedException"></exception>
         public override void RotateFlip(RotateFlipType rotateFlipType)
         {
@@ -236,7 +212,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         /// <summary>
         ///     Sets the palette.
         /// </summary>
-        /// <param name="palette">The palette.</param>
+        /// <param name="palette"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/icolorpalette/">The palette.</see></param>
         /// <param name="updateColors">if set to <c>true</c> [update colors].</param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void SetPalette(IColorPalette palette, bool updateColors)

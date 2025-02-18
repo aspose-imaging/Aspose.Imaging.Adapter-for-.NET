@@ -6,15 +6,16 @@
 
 namespace Aspose.Imaging.Pdf.Adapter
 {
+    using System;
+    using System.IO;
     using Aspose.Pdf;
     using Imaging.ImageOptions;
     using Color = Imaging.Color;
     using Rectangle = Imaging.Rectangle;
 
     /// <summary>
-    /// The Pdf image page
+    /// The Pdf image page of <see href="https://reference.aspose.com/imaging/net/aspose.imaging/vectorimage/">VectorImage</see>
     /// </summary>
-    /// <seealso cref="Aspose.Imaging.VectorImage" />
     internal class PdfImagePage : VectorImage
     {
         #region Fields
@@ -41,7 +42,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         /// <summary>
         /// Initializes a new instance of the <see cref="PdfImagePage"/> class.
         /// </summary>
-        /// <param name="pdfpage">The pdfpage.</param>
+        /// <param name="pdfpage"><see href="https://reference.aspose.com/pdf/net/aspose.pdf/page/">The pdfpage.</see></param>
         /// <param name="parent">The parent.</param>
         /// <param name="pageNumber">The page number.</param>
         public PdfImagePage(Page pdfpage, PdfImage parent, int pageNumber)
@@ -54,6 +55,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         #endregion
 
         #region Properties
+
 
         /// <summary>
         /// Gets a value indicating whether this instance is cached.
@@ -101,11 +103,11 @@ namespace Aspose.Imaging.Pdf.Adapter
         }
 
         /// <summary>
-        /// Resizes the specified new width.
+        /// Page resize.
         /// </summary>
         /// <param name="newWidth">The new width.</param>
         /// <param name="newHeight">The new height.</param>
-        /// <param name="resizeType">Type of the resize.</param>
+        /// <param name="resizeType"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/resizetype/">Type of the resize.</see></param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void Resize(int newWidth, int newHeight, ResizeType resizeType)
         {
@@ -113,11 +115,11 @@ namespace Aspose.Imaging.Pdf.Adapter
         }
 
         /// <summary>
-        /// Resizes the specified new width.
+        /// Page resize.
         /// </summary>
         /// <param name="newWidth">The new width.</param>
         /// <param name="newHeight">The new height.</param>
-        /// <param name="settings">The settings.</param>
+        /// <param name="settings">The <see href="https://reference.aspose.com/imaging/net/aspose.imaging/imageresizesettings/">settings.</see></param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void Resize(int newWidth, int newHeight, ImageResizeSettings settings)
         {
@@ -125,9 +127,9 @@ namespace Aspose.Imaging.Pdf.Adapter
         }
 
         /// <summary>
-        /// Rotates the flip.
+        /// Rotate and flip pages.
         /// </summary>
-        /// <param name="rotateFlipType">Type of the rotate flip.</param>
+        /// <param name="rotateFlipType"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/rotatefliptype/">Type of the rotate flip.</see></param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void RotateFlip(RotateFlipType rotateFlipType)
         {
@@ -137,7 +139,7 @@ namespace Aspose.Imaging.Pdf.Adapter
         /// <summary>
         /// Sets the palette.
         /// </summary>
-        /// <param name="palette">The palette.</param>
+        /// <param name="palette">The <see href="https://reference.aspose.com/imaging/net/aspose.imaging/icolorpalette/">palette.</see></param>
         /// <param name="updateColors">if set to <c>true</c> [update colors].</param>
         /// <exception cref="System.NotImplementedException"></exception>
         public override void SetPalette(IColorPalette palette, bool updateColors)
@@ -148,8 +150,8 @@ namespace Aspose.Imaging.Pdf.Adapter
         /// <summary>
         /// Gets the serialized stream.
         /// </summary>
-        /// <param name="imageOptions">The image options.</param>
-        /// <param name="clippingRectangle">The clipping rectangle.</param>
+        /// <param name="imageOptions"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/imageoptionsbase/">The image options.</see></param>
+        /// <param name="clippingRectangle"><see href="https://reference.aspose.com/imaging/net/aspose.imaging/rectangle/">The clipping rectangle.</see></param>
         /// <param name="pageNumber">The page number.</param>
         /// <returns></returns>
         public override Stream GetSerializedStream(ImageOptionsBase imageOptions, Rectangle clippingRectangle, out int pageNumber)

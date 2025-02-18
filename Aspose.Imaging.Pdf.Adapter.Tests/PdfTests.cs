@@ -1,11 +1,12 @@
 // -----------------------------------------------------------------------------------------------------------
-//   <copyright file="PdfTests.cs" company="Aspose Pty Ltd" author="" date="13.03.2024 13:40">
+//   <copyright file="PdfTests.cs" company="Aspose Pty Ltd" author="Stanislav Popov" date="04.06.2024 10:26">
 //      Copyright (c) 2001-2024 Aspose Pty Ltd. All rights reserved.
 //  </copyright>
 // -----------------------------------------------------------------------------------------------------------
 
 namespace Aspose.Imaging.Pdf.Adapter.Tests;
 
+using Adatpter.Tests.Core.ImageComparers;
 using Aspose.Pdf;
 using ImageComparers;
 using ImageOptions;
@@ -15,7 +16,7 @@ using Color = Imaging.Color;
 using Image = Imaging.Image;
 
 /// <summary>
-/// The pdf tests
+///     The pdf tests
 /// </summary>
 /// <seealso cref="Aspose.Imaging.Pdf.Adapter.Tests.PdfTestsBase" />
 public class Tests : PdfTestsBase
@@ -23,7 +24,7 @@ public class Tests : PdfTestsBase
     #region Fields
 
     /// <summary>
-    /// The ms exclude
+    ///     The ms exclude
     /// </summary>
     private readonly List<string> msExclude = new()
     {
@@ -35,17 +36,17 @@ public class Tests : PdfTestsBase
     #region Methods
 
     /// <summary>
-    /// The files
+    ///     The files
     /// </summary>
     public static string[] Files =
     {
         "1.dng", "ball.png", "Animation.gif", "Animation.webp", "MultiframePage1.dicom", "sample.tif", "sample.djvu", "MultiPage.cdr",
-        "MultiPage.cmx", "sample.odg", "sample.otg", "Sample.eps", "eye.wmf", "Input.jp2", "Sample.svg",
-        "TestEmfPlusFigures.emf", "testMedium.j2k", "tiger.bmp", "elephant.png"
+        "MultiPage.cmx", "sample.odg", "sample.otg", "Sample.eps", "eye.wmf", "Input.jp2", "Sample.svg", "TestEmfPlusFigures.emf",
+        "testMedium.j2k", "tiger.bmp", "elephant.png"
     };
 
     /// <summary>
-    /// Exports to PDF.
+    ///     Exports to PDF.
     /// </summary>
     /// <param name="fileName">Name of the file.</param>
     [Test]
@@ -54,7 +55,7 @@ public class Tests : PdfTestsBase
     {
         if (!IsLicensed)
         {
-            var excludes = new List<string>()
+            var excludes = new List<string>
             {
                 "Animation.gif",
                 "Animation.webp",
@@ -68,6 +69,7 @@ public class Tests : PdfTestsBase
                 return;
             }
         }
+
         this.Export(fileName, new TextComparer(CompareHelper.PdfExcludeList), new ImageOptionsExt<PdfSaveOptionsExt>
         {
             SaveOptions = new PdfSaveOptionsExt
@@ -78,7 +80,7 @@ public class Tests : PdfTestsBase
     }
 
     /// <summary>
-    /// Exports to HTML.
+    ///     Exports to HTML.
     /// </summary>
     /// <param name="fileName">Name of the file.</param>
     [Test]
@@ -97,7 +99,7 @@ public class Tests : PdfTestsBase
     }
 
     /// <summary>
-    /// Exports to document.
+    ///     Exports to document.
     /// </summary>
     /// <param name="fileName">Name of the file.</param>
     [Test]
@@ -114,7 +116,7 @@ public class Tests : PdfTestsBase
     }
 
     /// <summary>
-    /// Exports to excel.
+    ///     Exports to excel.
     /// </summary>
     /// <param name="fileName">Name of the file.</param>
     [Test]
@@ -125,7 +127,7 @@ public class Tests : PdfTestsBase
     }
 
     /// <summary>
-    /// Exports to PPTX.
+    ///     Exports to PPTX.
     /// </summary>
     /// <param name="fileName">Name of the file.</param>
     [Test]
@@ -136,7 +138,7 @@ public class Tests : PdfTestsBase
     }
 
     /// <summary>
-    /// Imports from PDF.
+    ///     Imports from PDF.
     /// </summary>
     /// <param name="fileFormat">The file format.</param>
     /// <exception cref="System.Exception"></exception>
@@ -157,7 +159,6 @@ public class Tests : PdfTestsBase
 
         using (var image = Image.Load(inputFileName, PdfLoadOptions.Create()))
         {
-            
             image.Save(outFileName, options.ImageOptions);
         }
 
@@ -166,7 +167,7 @@ public class Tests : PdfTestsBase
         {
             using (var image = Image.Load(outFileName))
             {
-                image.Save(outFileName+".png", new PngOptions());
+                image.Save(outFileName + ".png", new PngOptions());
             }
 
             RemoveFile(outFileName);
@@ -174,14 +175,13 @@ public class Tests : PdfTestsBase
             standardFileName += ".png";
         }
 
-        BaseComparer comparer = fileFormat==FileFormat.Svg? new XmlComparer(new List<string>()): new BinaryComparer();
+        BaseComparer comparer = fileFormat == FileFormat.Svg ? new XmlComparer(new List<string>()) : new BinaryComparer();
         CompareHelper.Compare(comparer, outFileName, standardFileName);
         RemoveFile(outFileName);
     }
 
-
     /// <summary>
-    /// Exports the specified file name.
+    ///     Exports the specified file name.
     /// </summary>
     /// <param name="fileName">Name of the file.</param>
     /// <param name="comparer">The comparer.</param>
@@ -207,6 +207,6 @@ public class Tests : PdfTestsBase
         CompareHelper.Compare(comparer, outFileName, standardFileName);
         RemoveFile(outFileName);
     }
-    
+
     #endregion
 }

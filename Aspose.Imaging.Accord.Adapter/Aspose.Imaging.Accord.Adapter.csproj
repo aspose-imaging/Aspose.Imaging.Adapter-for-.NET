@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionNumber Condition="'$(VersionNumber)' == '' ">24.10</VersionNumber>
+    <AccVersion Condition="'$(AfvVersion)' == '' ">24.11.0</AccVersion>
+    <ImgVersion Condition="'$(ImgVersion)' == '' ">24.11.0</ImgVersion>
+    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <PackAsTool>False</PackAsTool>
+    <SignAssembly Condition="Exists('..\Aspose.Certificates\Aspose.snk')">True</SignAssembly>
+    <AssemblyOriginatorKeyFile Condition="Exists('..\Aspose.Certificates\Aspose.snk')">..\Aspose.Certificates\Aspose.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspose.Imaging" Version="[$(ImgVersion),)" />
+    <PackageReference Include="Openize.Accord" Version="[$(AccVersion),)" />
+  </ItemGroup>
+</Project>

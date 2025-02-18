@@ -5,11 +5,12 @@ And also conversion PDF format to all formats supported by the **Aspose.Imaging*
 
 ## Platform Independence
 
-Aspose.Imaging.Pdf.Adapter for .NET can be used to develop applications on Windows Desktop (x86, x64), Windows Server (x86, x64), Windows Azure, Windows Embedded (CE 6.0 R2), as well as Linux x64. The supported platforms include Net7.0.
+Aspose.Imaging.Pdf.Adapter for .NET can be used to develop applications on Windows Desktop (x86, x64), Windows Server (x86, x64), Windows Azure, Windows Embedded (CE 6.0 R2), as well as Linux x64. The supported platforms include .Net Core 3.1, .Net6.0, .Net7.0, .Net8.0.
 
-## New Features & Enhancements in Version 24.4
+## New Features & Enhancements in Version 25.2
 
-First release!
+Upadted Aspose.Imaging to version 25.2
+Updated Aspose.Pdf to version 25.2
 
 ## Getting Started with Aspose.Imaging.Pdf.Adapter for .NET
 
@@ -39,11 +40,8 @@ using Aspose.Pdf;
 
 // Register adapter - must be called once to initialize the library
 // it is possible not to explicitly call registration if there were previous calls
-// PdfImage.SetLicense, PdfLoadOptions.Create, ImageOptionsExt
+// PdfLoadOptions.Create, ImageOptionsExt
 PdfImage.Register();
-
-//if you have a license
-PdfImage.SetLicense("license.lic");
 
 using var image = Aspose.Imaging.Image.Load(@"example.cdr");
 image.Save("result.pdf", new ImageOptionsExt<PdfSaveOptionsExt>()
@@ -67,11 +65,9 @@ using Aspose.Pdf;
 
 // Register adapter - must be called once to initialize the library
 // it is possible not to explicitly call registration if there were previous calls
-// PdfImage.SetLicense, PdfLoadOptions.Create, ImageOptionsExt
+// PdfLoadOptions.Create, ImageOptionsExt
 PdfImage.Register();
 
-//if you have a license
-PdfImage.SetLicense("license.lic");
 using var image = Aspose.Imaging.Image.Load(@"example.cdr");
 image.Save(@"result.docx", new ImageOptionsExt<DocSaveOptions>
 {
@@ -94,11 +90,9 @@ using Aspose.Imaging.Pdf.Adapter;
 
 // Register adapter - must be called once to initialize the library
 // it is possible not to explicitly call registration if there were previous calls
-// PdfImage.SetLicense, PdfLoadOptions.Create, ImageOptionsExt
+// PdfLoadOptions.Create, ImageOptionsExt
 PdfImage.Register();
 
-//if you have a license
-PdfImage.SetLicense("license.lic");
 using var image = Aspose.Imaging.Image.Load("example.pdf"));
 image.Save("result.webp", new WebPOptions());
 ```

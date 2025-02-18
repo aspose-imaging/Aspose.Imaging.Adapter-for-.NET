@@ -10,14 +10,14 @@ namespace Aspose.Imaging.Pdf.Adapter.ImageOptions
 
     /// <summary>
     /// The Pdf save options extended
-    /// </summary>
     /// <seealso cref="Aspose.Pdf.PdfSaveOptions" />
+    /// </summary>
     public class PdfSaveOptionsExt : PdfSaveOptions
     {
         #region Properties
 
         /// <summary>
-        /// Gets or sets the format conversion options.
+        /// Gets or sets <see href="https://reference.aspose.com/pdf/net/aspose.pdf/pdfformatconversionoptions/pdfformatconversionoptions/">PdfConversionOptions</see>.
         /// </summary>
         /// <value>
         /// The format conversion options.
