@@ -9,10 +9,10 @@ namespace Aspose.Imaging.Pdf.Adapter.ImageOptions
     using Aspose.Pdf;
 
     /// <summary>
-    /// The image options extended
+    /// The extended image options of <see href="https://reference.aspose.com/imaging/net/aspose.imaging.imageoptions/">ImageOptionsBase</see>
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <seealso cref="Aspose.Imaging.ImageOptionsBase" />
+    /// <typeparam name="T">T is <see href="https://reference.aspose.com/pdf/net/aspose.pdf.facades/form/saveoptions/">SaveOptions from Aspose.Pdf library</see></typeparam>
+    /// <seealso href="https://reference.aspose.com/imaging/net/aspose.imaging.imageoptions/" />
     public class ImageOptionsExt<T> : ImageOptionsBase where T : SaveOptions
     {
         /// <summary>
@@ -26,10 +26,10 @@ namespace Aspose.Imaging.Pdf.Adapter.ImageOptions
         #region Properties
 
         /// <summary>
-        /// Gets or sets the save options.
+        /// Gets or sets the <see href="https://reference.aspose.com/pdf/net/aspose.pdf.facades/form/saveoptions/">SaveOptions</see>.
         /// </summary>
         /// <value>
-        /// The save options.
+        /// The save options from Aspose.Pdf library.
         /// </value>
         public T SaveOptions { get; set; }
 

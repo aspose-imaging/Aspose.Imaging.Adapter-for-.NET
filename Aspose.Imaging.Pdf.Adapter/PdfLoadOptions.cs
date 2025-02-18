@@ -7,9 +7,9 @@
 namespace Aspose.Imaging.Pdf.Adapter
 {
     /// <summary>
-    ///     The Pdf load options
+    ///     The Pdf load options of <see href="https://reference.aspose.com/imaging/net/aspose.imaging/loadoptions/">LoadOptions</see>
     /// </summary>
-    /// <seealso cref="Aspose.Imaging.LoadOptions" />
+
     public class PdfLoadOptions : LoadOptions
     {
         #region Constructors
@@ -36,14 +36,14 @@ namespace Aspose.Imaging.Pdf.Adapter
         /// <summary>
         ///     Creates this instance.
         /// </summary>
-        /// <returns></returns>
+        /// <returns><see cref="PdfLoadOptions"/>The Pdf load options</returns>
         public static PdfLoadOptions Create()
         {
             return instance ?? (instance = new PdfLoadOptions());
         }
 
         /// <summary>
-        ///     The instance
+        ///     <see cref="PdfLoadOptions">The instance</see>
         /// </summary>
         private static PdfLoadOptions instance;
 

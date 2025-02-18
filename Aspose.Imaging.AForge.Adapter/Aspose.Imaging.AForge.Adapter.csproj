@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionNumber Condition="'$(VersionNumber)' == '' ">24.11</VersionNumber>
+	  <AfvVersion Condition="'$(AfvVersion)' == '' ">24.9.0</AfvVersion>
+    <ImgVersion Condition="'$(ImgVersion)' == '' ">24.11.0</ImgVersion>
+    <TargetFrameworks>net7.0;net8.0</TargetFrameworks>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Copyright>Copyright © 2010-2024 Aspose Pty Ltd.</Copyright>
+    <Version>$(VersionNumber)</Version>
+    <PackAsTool>False</PackAsTool>
+    <SignAssembly Condition="Exists('..\Aspose.Certificates\Aspose.snk')">True</SignAssembly>
+    <AssemblyOriginatorKeyFile Condition="Exists('..\Aspose.Certificates\Aspose.snk')">..\Aspose.Certificates\Aspose.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Imaging" Version="[$(ImgVersion),)" />
+    <PackageReference Include="Openize.AForge" Version="[$(AfvVersion),)" />
+  </ItemGroup>
+
+</Project>
